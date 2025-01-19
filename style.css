@@ -1,0 +1,183 @@
+/* Убираем отступы и паддинги для всего документа */
+html, body {
+    margin: 0;      /* Убираем внешние отступы */
+    padding: 0;     /* Убираем внутренние отступы */
+    height: 100%;   /* Устанавливаем высоту на 100% */
+    width: 100%;    /* Устанавливаем ширину на 100% */
+}
+
+
+/* Основные стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Убедитесь, что тело и HTML занимают всю высоту */
+}
+
+/* Главный баннер */
+.hero {
+    background-image: url('tatpa.jpg'); /* Убедись, что здесь правильное изображение */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    transform: scale(0.01); /* Увеличиваем фото на 30% */
+    transform-origin: center center; /* Масштабирование по центру */
+}
+
+/* Контент в главном баннере */
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Уменьшаем изображение */
+.hero-image {
+    width: 50%; /* Уменьшаем изображение до 50% */
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.hero-image.image-animate {
+    animation: scaleImage 1s forwards;
+}
+
+@keyframes scaleImage {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2); /* Увеличиваем изображение */
+    }
+}
+
+/* Меню */
+.menu {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 280px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+/* Отзывы */
+.reviews {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.review-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 30px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-card p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.review-card span {
+    font-size: 1em;
+    color: #888;
+}
+
+/* Контакты */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 2em;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff4d4d;
+}

@@ -7,6 +7,55 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const orderButtons = document.querySelectorAll('.order-btn');
+    const modal = document.getElementById('orderModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Открытие модального окна при нажатии на кнопку "Պատվիրել"
+    orderButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            modal.style.display = 'block'; // Показываем модальное окно
+        });
+    });
+
+    // Закрытие модального окна при нажатии на крестик
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none'; // Скрываем модальное окно
+    });
+
+    // Закрытие модального окна при клике вне окна
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none'; // Скрываем модальное окно
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openEventButton = document.querySelector('.open-event-btn');
+    const eventPopup = document.getElementById('eventPopup');
+    const closeEventPopupButton = document.getElementById('closeEventPopup');
+
+    // Открытие модального окна при нажатии на кнопку
+    openEventButton.addEventListener('click', function() {
+        eventPopup.style.display = 'block'; // Показываем окно
+    });
+
+    // Закрытие модального окна при нажатии на крестик
+    closeEventPopupButton.addEventListener('click', function() {
+        eventPopup.style.display = 'none'; // Скрываем окно
+    });
+
+    // Закрытие модального окна при клике вне окна
+    window.addEventListener('click', function(event) {
+        if (event.target === eventPopup) {
+            eventPopup.style.display = 'none'; // Скрываем окно
+        }
+    });
+});
+
+
 // Скрипт для анимации кнопки и изображения
 document.getElementById('menuButton').addEventListener('click', function(e) {
     e.preventDefault();
@@ -23,3 +72,4 @@ document.getElementById('menuButton').addEventListener('click', function(e) {
     const image = document.querySelector('.hero-image');
     image.classList.add('image-animate');
 });
+

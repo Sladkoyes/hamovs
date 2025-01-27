@@ -11,6 +11,30 @@
 </head>
 
 <body>
+
+
+<!-- Кнопка "О нас" -->
+<button class="open-about-btn">մեր մասին</button>
+
+<!-- Модальное окно с видео -->
+<div class="about-popup">
+    <div class="about-popup-content">
+        <button class="close-about-popup">×</button>
+        <h2>О нас</h2>
+        <div class="about-video-container">
+            <video id="about-video" width="100%" controls>
+                <source src="video.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <p>«Բարի դիտում»            </p>
+        </div>
+        <div class="about-navigation">
+            <button class="prev-video-btn">◁</button>
+            <button class="next-video-btn">▷</button>
+        </div>
+    </div>
+</div>   
+
     <!-- Главный баннер -->
     <header class="hero" data-aos="fade-up">
         <div class="hero-content">
@@ -21,6 +45,8 @@
         </div>
     </header>
 
+    
+    
 <!-- Меню -->
 <section class="menu" id="menu">
     <h2 class="section-title" data-aos="fade-up">Menu</h2>
@@ -29,7 +55,7 @@
         <div class="menu-item" data-aos="zoom-in">
             <img src="hac.jpg" alt="Ժենգյալով հաց">
             <h3>Ժենգյալով հաց</h3>
-            <p>Ամենատարբեր կանաչիներով լցոնված հաց.</p>
+            <p>Ամենատարբեր կանաչիներով հաց.</p>
             <button class="order-btn" data-item="Ժենգյալով հաց">Պատվիրել</button>
         </div>
         <!-- Другой товар -->
@@ -108,28 +134,7 @@
             easing: 'ease-in-out',
         });
 
-        // Скрипт для анимации кнопки и прокрутки к меню
-        document.getElementById('menuButton').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Анимация кнопки (спускаем ее вниз)
-            this.classList.add('moving');
-            setTimeout(() => {
-                // Прячем кнопку, когда она достигнет конца
-                this.style.display = 'none';
-            }, 600);  // Параметры таймаута соответствуют длительности анимации
-            
-            // Прокрутка страницы к секции меню
-            document.querySelector('#menu').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
 
-            // Заменяем изображение
-            const imageContainer = document.querySelector('.image-container');
-            const image = document.querySelector('.hero-image');
-            image.classList.add('image-animate');
-        });
     </script>
     <script src="script.js"></script>
 
@@ -153,17 +158,21 @@
     <div class="event-popup" id="eventPopup">
         <div class="event-popup-content">
             <span class="close-btn" id="closeEventPopup">&times;</span>
-            <h2>
-                The LOFT х Hamov Artsakh</h2>
+            <h2> The LOFT х Hamov Artsakh</h2>
             <p><strong>When:</strong> Նոյեմբերի 24-ին, ժամը՝ 12:00-ից</p>
             <p><strong>Where:</strong> ԼՈՖԹ (Մոսկովյան 3)</p>
             <p><strong></strong> Այդ օրը հնարավորություն կունենաք համտեսել Ժենգյալով հաց Մարինեից, կուրկուտ՝ Ալլայից և հայտնի արցախյան փախլավա ու այլ քաղցրավենիքներ՝ Իդայից:!</p>
             <p><strong></strong> Սիրով՝ Hamov Artsakh!</p>
             <!-- Ссылка на вашу страницу -->
             <a href="https://www.facebook.com/events/s/artsakhian-food-day/1610411533162263/" target="_blank" class="event-link">Learn More</a>
+                    <!-- Кнопка для Google Maps -->
+        <a href="https://www.google.com/maps/place/Loft/@40.1841469,44.5174815,17z/data=!4m14!1m7!3m6!1s0x406abce695eaac7f:0x316671affdb93ee5!2sLoft!8m2!3d40.184147!4d44.522347!16s%2Fg%2F11b6xh88s0!3m5!1s0x406abce695eaac7f:0x316671affdb93ee5!8m2!3d40.184147!4d44.522347!16s%2Fg%2F11b6xh88s0?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="event-link location-btn">Location</a>
+    </div>
+</div>
+
         </div>
     </div>
 
+    
     <script src="script.js"></script>
-</body>
-</html>
+
